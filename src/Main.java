@@ -1,7 +1,13 @@
 import java.util.Scanner;
 
+/**
+ * @author yangsheng
+ */
 public class Main
 {
+    /**
+     * @Method: main @Description: TODO @param args @throws
+     */
     public static void main(String[] args)
     {
         String input;
@@ -15,7 +21,7 @@ public class Main
         while (scan.hasNext())
         {
             input = scan.nextLine();
-            if (input.indexOf("(") >= 0 || input.indexOf(")") >= 0)
+            if (input.indexOf('(') >= 0 || input.indexOf(')') >= 0)
             {
                 System.out.println("Format error! Please input again!");
             }

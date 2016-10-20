@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -11,15 +12,15 @@ public class Polynomial
     /**
      * saveFormat是原始表达式格式
      */
-    private ArrayList<Map<String, String>> saveFormat;
+    private List<Map<String, String>> saveFormat;
     /**
      * result是结果字符串
      */
-    private String                         result;
+    private String                    result;
     /**
      * resultFormat是计算后的表达式格式
      */
-    private ArrayList<Map<String, String>> resultFormat;
+    private List<Map<String, String>> resultFormat;
 
     /**
      * @Method: expression @Description: TODO @param operatop @return
@@ -58,7 +59,7 @@ public class Polynomial
             int sum = 1;
             int count;
             String value;
-            for (String mdata : mclassify)
+            for (final String mdata : mclassify)
 
             {
                 // 对于mclassify中每项再用"-"分割
@@ -386,7 +387,7 @@ public class Polynomial
             if (!mdata.isEmpty())
 
             {
-                for (String key : mdata.keySet())
+                for (final String key : mdata.keySet())
 
                 {
                     if (flag && Math.abs(Integer.parseInt(sum)) == 1)
